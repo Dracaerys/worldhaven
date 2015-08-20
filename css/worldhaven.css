@@ -243,18 +243,18 @@ span {
 }
 
 button {
-	background-color: #3498db;
-	border: none;
+	background-color: #4d90fe;
+	/*background-color: #3498db;*/
+	border: 1px solid #3079ed;
 	color: white;
 	width: 80px;
 	height: 25px;
-	box-shadow: 0px 2px 0px grey;
+	/*box-shadow: 0px 2px 0px grey;*/
 	margin-top: 10px;
 	border-radius: 2px;
 }
 
 button:hover, button:focus {
-	outline: none;
-	box-shadow: 0px 0px 0px grey;
-	margin-top: 12px;
+	border: 1px solid #2f5bb7;
+	background-color: #357ae8;
 }
