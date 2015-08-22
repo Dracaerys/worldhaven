@@ -21,25 +21,14 @@
 	mysqli_close($conn);	
 ?>
 
-<!DOCTYPE html>
-<html>
-	<html>
-		<head>
-			<meta charset="UTF-8">
-			<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=latin,greek' rel='stylesheet' type='text/css'>
-			<link href='css/worldhaven.css' rel='stylesheet' type='text/css'>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-			<script src="js/outside.js"></script>
-			
-		</head>
-		
-		<body>
-			
 			<?php include("inc/header.html") ?>
 			<div id="mainContainer">
 				<div id="leftCol">
 					<div class="worldInfo">
 						<h2><?php echo $rowWorld["worldName"]; ?></h2>
+						<p>Author: </p><?php echo $rowWorld["worldAuthor"]; ?><br>
+						<p>Created: </p><?php echo $rowWorld["worldDate"]; ?><br>
+						<p>Likes: </p><?php echo $rowWorld["worldLikes"]; ?>
 					</div>
 					<div class="featuredWorlds">
 						<div id="popularHeader" class="worldHeader">
@@ -56,13 +45,9 @@
 				
 				<div id="centerCol" class="center">
 					
-					<div id="welcomeImg" class="noselect center">
-					</div>
+					<img src=img/<?php echo $rowWorld["worldImage"]; ?> id="welcomeImg" class="noselect center">
 					
 					<div id="welcomeText" class="center">
-						<?php echo $rowWorld["worldAuthor"]; ?>
-						<?php echo $rowWorld["worldLikes"]; ?>
-						<?php echo $rowWorld["worldDate"]; ?>
 					</div>
 					
 				</div>

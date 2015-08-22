@@ -9,21 +9,6 @@
 	
 	mysqli_close($conn);	
 ?>
-
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=latin,greek' rel='stylesheet' type='text/css'>
-		<link href='css/worldhaven.css' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/outside.js"></script>
-		
-	</head>
-	
-	<body>
 		
 		<?php include("inc/header.html") ?>
 		
