@@ -2,6 +2,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
+	background-color: #252525;
 }
 
 .noselect {
@@ -37,12 +38,13 @@ p {
 #header {
 	width: 100%;
 	height: 75px;
-	background-color: #f1f0f1;
-	box-shadow: 0px 2px 5px grey;
+	background-color: #212121;
+	//box-shadow: 0px 2px 5px grey;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	position: fixed;
 	top: 0px;
 	z-index: 1;
-	background-image: url("/worldhaven/img/worldhaven.png");
+	background-image: url("/worldhaven/img/worldhavenDark.png");
 	background-position: center;
 	background-size: 600px 70px;
 	background-repeat: no-repeat;
@@ -53,17 +55,17 @@ p {
 	height: 50px;
 	position: absolute;
 	top: 10px;
-	background-color: white;
+	background-color: #282828;
 	border-radius: 50px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 40px 40px;
-	transition: box-shadow 0.3s;
-	cursor:pointer;
+	transition: background-color 0.2s;
+	cursor: pointer;
 }
 
 .headerBtn:hover {
-	box-shadow: 0px 1px 1px grey;
+	background-color: #303030;
 }
 
 #home {
@@ -83,9 +85,138 @@ p {
 
 #forums {
 	right: 70px;
-	background-image: url("/worldhaven/img/forums.jpg");
+	background-image: url("/worldhaven/img/forums.png");
 }
 
+#account {
+	opacity: 0;
+	position: absolute;
+	top: 80px;
+	right: 10px;
+	width: 300px;
+	height: 153px;
+	background-color: #252525;
+	z-index: 0;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	border: 1px solid #212121;
+}
+
+#account:before {
+	content: "";
+    position: absolute;
+    top: -27px;
+    right: 10px;
+    z-index: 1;
+    border: solid 14px transparent;
+    border-bottom-color: #212121;
+}
+
+#account:after {
+	content: "";
+    position: absolute;
+    top: -27px;
+    right: 9px;
+    z-index: 1;
+    border: solid 15px transparent;
+    border-bottom-color: #252525;
+}
+
+#accountBox {
+	margin: 10px;
+	height: 84px;
+	vertical-align: top;
+	background-color: #252525;
+}
+
+#accountBox img {
+	position: absolute;
+	left: 20px;
+	border-radius: 50px;
+}
+
+#accountBox div {
+	color: #ddd;
+	font-size: 24px;
+	position: absolute;
+	left: 110px;
+}
+
+#accountOptions {
+	background: #212121;
+	padding: 10px 0;
+	border-top: 1px solid #303030;
+	height: 28px;
+}
+
+#accountOptions button {
+	height: 28px;
+	position: absolute;
+	padding: 0px 10px;
+}
+
+#myAccount {
+	left: 20px;
+}
+
+#signOut {
+	right: 20px;
+}
+
+#toast {
+	//height: 50px;
+	background-color: #3d80ee;
+	position: fixed;
+	bottom: 20px;
+	left: calc(50% - 70px);
+	line-height: 1.5;
+	padding: 10px 25px;
+	color: #ddd;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	opacity: 0;
+	z-index: 1000;
+}
+
+#nightMode {
+	position: fixed;
+	bottom: 20px;
+	background-color: #212121;
+	width: 100px;
+	height: 50px;
+	right: 40px;
+	padding: 5px;
+	border-radius: 2px;
+	z-index: 99;
+}
+
+.dayNight {
+	border-radius: 2px;
+	float: left;
+	background-color: #252525;
+	width: 47.5%;
+	height: 100%;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+
+.dayNight:hover {
+	background-color: #303030;
+}
+
+#day {
+	margin-right: 5px;
+	background-image: url("/worldhaven/img/day.png");
+	background-size: 40px;
+	background-position: 4px 4px;
+	background-repeat: no-repeat;
+}
+
+#night {
+	background-image: url("/worldhaven/img/night.png");
+	background-size: 35px;
+	background-position: 6px 6px;
+	background-repeat: no-repeat;
+}
 /*==========
 ====MAIN====
 ==========*/
@@ -93,8 +224,7 @@ p {
 #mainContainer {
 	width: 1200px;
 	height: 1000px;
-	background-color: white;
-	box-shadow: 0px 2px 5px grey;
+	//background-color: #212121;
 	margin: 100px auto 25px;
 	overflow: hidden;
 	padding: 10px;
@@ -107,39 +237,39 @@ p {
 	max-width: 100%;
 	max-height: 300px;
 	font-weight: 700;
-	background-color: white;
-	box-shadow: 0px 2px 3px grey;
+	background-color: #212121;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	border-radius: 5px 5px 0px 0px;
-	color: white;
+	color: #ddd;
 	text-align: center;
 	font-size: 80px;
 	line-height: 1.8em;
 	text-shadow: 1px 1px grey;
 	margin-bottom: 0px;
-	z-index: 1;
+	z-index: 0;
+	cursor: default;
 }
 
 #welcomeText {
 	position: relative;
 	width: 660px;
 	height: 80px;
-	background-color: white;
-	box-shadow: 0px 2px 3px grey;
+	background-color: #252525;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	padding: 10px;
 	border-radius: 0px 0px 5px 5px;
-	color: #333;
+	color: #ddd;
 	font-size: 18px;
-	z-index: 99;
+	z-index: 0;
 }
 
 #centerCol {
 	width: 680px;
-	height: 100%;
-	background-color: #f1f0f1;
-	box-shadow: 0px 2px 5px grey;
+	//height: 500px;
 	overflow: hidden;
 	padding: 10px;
 	position: relative;
+	background-color: #212121;
 }
 
 /*==========
@@ -149,56 +279,51 @@ p {
 #leftCol {
 	position: absolute;
 	width: 205px;
-	height: 980px;
-	background-color: #f1f0f1;
-	box-shadow: 0px 2px 5px grey;
 	overflow: hidden;
 	z-index: 0;
 	padding: 10px;
+	border-collapse: collapse;
+	background-color: #212121;
 }
 
 .featuredWorlds {
 	position: relative;
-	height: 30%;
-	background-color: white;
-	box-shadow: 0px 4px 5px grey;
+	background-color: #252525;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	margin-bottom: 30px;
 }
 
 .worldHeader {
 	height: 15%;
-	color: #3498db;
-	font-weight: 700;
-	/*border-bottom: 5px solid #f1f0f1;*/
+	font-weight: 400;
 	text-align: center;
 	line-height: 3em;
-	box-shadow: 0px 1px 3px grey;
+	box-shadow: 0 1px 0px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	margin-bottom: 3px;
-	margin-top: 20px;
+	color: #ddd;
 }
 
 .worldInfo {
 	position: relative;
-	color: #3498db;
-	height: 13%;
-	background-color: white;
-	box-shadow: 0px 4px 5px grey;
+	background-color: #252525;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	line-height: 1.5em;
 	overflow: hidden;
 }
 
 .test {
 	position: relative;
-	height: calc(16% - 8px);
-	background-color: white;
-	border-bottom: 3px solid #3498db;
+	height: calc(16% - 0px);
+	background-color: #252525;
+	border-bottom: 1px solid rgba(0,0,0,0.12);
 	padding: 4px;
-	transition: background-color 0.3s, box-shadow 0.3s;
-	cursor:pointer;
-	line-height: 0.9em;
+	transition: background-color 0.2s;
+	cursor: pointer;
+	line-height: 1em;
 }
 
 .test:hover {
-	box-shadow: 0px 2px 5px grey;
+	background-color: #303030;/*#f0f0f0;*/
 	z-index: 5;
 }
 
@@ -207,34 +332,122 @@ dl {
 	overflow: hidden;
 	color: grey;
 	font-size: 12px;
+	font-weight: 400;
 }
 
 dt, dd {
 	margin: 0;
 }
 
+span {
+	color: #3498db;
+	font-weight: 500;
+}
+
+/*==========
+====RIGHT====
+==========*/
+
+#rightCol {
+	position: absolute;
+	right: 10px;
+	width: 205px;
+	overflow: hidden;
+	z-index: 0;
+	padding: 10px;
+	border-collapse: collapse;
+	background-color: #212121;
+}
+
+.listIcon {
+	position: absolute;
+	left: 10px;
+	width: 29px;
+	height: 24px;
+}
+
+li {
+	line-height: 1.8em;
+	vertical-align: text-top;
+	font-size: 20px;
+	background-size: 30px 24px;
+	background-repeat: no-repeat;	
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+
+li:hover {
+	background-color: #303030;
+}
+
+#redditLi {
+	background-image: url(../img/redditIcon.png);
+	background-position: 5px 3px;
+}
+
+#forumsLi {
+	background-image: url(../img/forums.png);
+	background-position: 5px 7px;
+}
+
+#twitterLi {
+	background-image: url(../img/twitterIcon.png);
+	background-size: 30px 30px;
+	background-position: 5px 5px;
+}
 /*===========
 ====LOGIN====
 ===========*/
 
-#loginModal {
+#loginBox {
 	width: 380px;
-	height: 280px;
-	background-color: blue;
-	opacity: 0;
+	height: 285px;
 	position: fixed;
 	top: 300px;
 	left: calc(50% - 200px);
-	background-color: white;
-	box-shadow: 0px 2px 5px grey;
 	border-radius: 3px;
 	padding: 10px;
 	font-size: 20px;
 	text-align: center;
-	background-image: url("/worldhaven/img/worldhaven.png");
-	background-position: 50% 25%;
+	background-image: url("/worldhaven/img/worldhavenDark.png");
+	background-position: 50% 50px;
 	background-size: 250px 30px;
 	background-repeat: no-repeat;
+	background-color: #212121;
+}
+
+#loginBox p {
+	margin: 0;
+	position: absolute;
+	left: 35px;
+	padding-top: 10px;
+	color: #ddd;
+}
+
+#registerBox {
+	width: 480px;
+	height: 400px;
+	position: fixed;
+	top: 250px;
+	left: calc(50% - 250px);
+	border-radius: 3px;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+	background-image: url("/worldhaven/img/worldhavenDark.png");
+	background-position: 50% 60px;
+	background-size: 250px 30px;
+	background-repeat: no-repeat;
+	background-color: #212121;
+}
+
+#registerBox  p {
+	margin: 0;
+	width: calc(100% - 20px);
+	position: absolute;
+	left: 0;
+	top: 10px;
+	padding: 10px;
 }
 
 input {
@@ -243,37 +456,37 @@ input {
 	height: 30px;
 	width: 80%;
 	font-size: 20px;
+	background-color: #212121;
+	color: #ddd;
+	border: none;
+	border-bottom: 2px solid grey;
+	transition: border 0.2s;
 }
 
 input:focus, textarea:focus {
-	outline-color: #3498db;
+	outline: none;
+}
+
+input:hover {
+	border: none !important;
+	border-bottom: 2px solid #4d90fe !important;
+}
+
+input:focus {
+	border: none !important;
+	border-bottom: 2px solid #4d90fe !important;
 }
 
 form {
-	margin-top: calc(25%);
+	margin-top: calc(20%);
 }
 
-span {
-	position:absolute; 
-	width:100%;
-	height:100%;
-	top:0;
-	left: 0;
-}
-
-button {
-	background-color: #4d90fe;
-	/*background-color: #3498db;*/
+form button {
+	background-color: #3d80ee;
 	border: 1px solid #3079ed;
-	color: white;
-	width: 80px;
-	height: 25px;
-	/*box-shadow: 0px 2px 0px grey;*/
-	margin-top: 10px;
+	color: #212121;
+	height: 40px;
+	margin-top: 25px;
 	border-radius: 2px;
-}
-
-button:hover, button:focus {
-	border: 1px solid #2f5bb7;
-	background-color: #357ae8;
+	font-size: 24px;
 }
