@@ -253,7 +253,7 @@ p {
 #welcomeText {
 	position: relative;
 	width: 660px;
-	height: 80px;
+	height: 84px;
 	background-color: #252525;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	padding: 10px;
@@ -309,8 +309,12 @@ p {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	line-height: 1.5em;
 	overflow: hidden;
+	color: #ddd;
 }
 
+.worldInfo p {
+	color: grey;
+}
 .test {
 	position: relative;
 	height: calc(16% - 0px);
@@ -399,21 +403,23 @@ li:hover {
 ====LOGIN====
 ===========*/
 
+.formBox {
+	position: fixed;
+	padding: 10px;
+	font-size: 20px;
+	background-color: #212121;
+	background-size: 250px 30px;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
 #loginBox {
 	width: 380px;
 	height: 285px;
-	position: fixed;
 	top: 300px;
 	left: calc(50% - 200px);
-	border-radius: 3px;
-	padding: 10px;
-	font-size: 20px;
-	text-align: center;
 	background-image: url("/worldhaven/img/worldhavenDark.png");
 	background-position: 50% 50px;
-	background-size: 250px 30px;
-	background-repeat: no-repeat;
-	background-color: #212121;
 }
 
 #loginBox p {
@@ -427,18 +433,10 @@ li:hover {
 #registerBox {
 	width: 480px;
 	height: 400px;
-	position: fixed;
 	top: 250px;
 	left: calc(50% - 250px);
-	border-radius: 3px;
-	padding: 10px;
-	font-size: 20px;
-	text-align: center;
 	background-image: url("/worldhaven/img/worldhavenDark.png");
 	background-position: 50% 60px;
-	background-size: 250px 30px;
-	background-repeat: no-repeat;
-	background-color: #212121;
 }
 
 #registerBox  p {
@@ -450,7 +448,15 @@ li:hover {
 	padding: 10px;
 }
 
-input {
+#worldBox {
+	top: 175px;
+	width: 480px;
+	left: calc(50% - 250px);
+	background-image: url("/worldhaven/img/worldhavenDark.png");
+	background-position: 50% 60px;
+}
+
+input, textarea {
 	margin: 2% 10%;
 	position: relative;
 	height: 30px;
@@ -461,18 +467,20 @@ input {
 	border: none;
 	border-bottom: 2px solid grey;
 	transition: border 0.2s;
+	max-width: 80%;
+	font-family: inherit;
 }
 
 input:focus, textarea:focus {
 	outline: none;
 }
 
-input:hover {
+input:hover, textarea:hover {
 	border: none !important;
 	border-bottom: 2px solid #4d90fe !important;
 }
 
-input:focus {
+input:focus, textarea:focus {
 	border: none !important;
 	border-bottom: 2px solid #4d90fe !important;
 }
@@ -487,6 +495,26 @@ form button {
 	color: #212121;
 	height: 40px;
 	margin-top: 25px;
+	margin-bottom: 25px;
 	border-radius: 2px;
 	font-size: 24px;
+}
+
+textarea {
+	height: 200px;
+	max-height: 250px;
+	background-color: #252525;
+}
+
+input[type="file"] {
+	width: 255px !important;
+	border: none;
+}
+
+input[type="file"]:hover {
+	border: none !important;
+}
+
+input[type="file"]:focus {
+	border: none !important;
 }

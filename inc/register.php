@@ -71,8 +71,6 @@
 	}
 ?>
 
-
-<!-----View----->
 <form action="" method="POST">
 	<input type="text" name="username" placeholder="Username" class="inpt" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$">
 	<br>

@@ -37,10 +37,14 @@ mysqli_close($conn);
 
 	<div id="centerCol" class="center box">
 
-		<img src=img/<?php echo $rowWorld["worldImage"]; ?> id="welcomeImg" class="noselect center">
+		<img src=img/<?php echo $rowWorld["worldName"]; ?>.png id="welcomeImg" class="noselect center">
 
-		<div id="welcomeText" class="center">
-		</div>
+		<?php if ($rowWorld["worldDesc"] != "") {
+			echo "<div id='welcomeText' class='center'>"
+			.$rowWorld["worldDesc"]."
+		</div>";
+		} ?>
+		
 
 	</div>
 </div>

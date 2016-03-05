@@ -7,12 +7,14 @@
 		$worldDesc = $_POST['worldDesc'];
 		$user = $_SESSION['username'];
 
-
+	}
 ?>
 <form action="" method="POST">
 	<input type="text" name="worldName" placeholder="World name" class="inpt" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,15}$">
 	<br>
-	<textarea rows="5"> type="text" name="worldDesc" placeholder="World description" class="inpt" required></textarea>
+	<textarea name="worldDesc" placeholder="World description" class="inpt" required id="desc" maxlength="320"></textarea>
 	<br>
-	<button type="submit" name="submit" class="btn">Register</button>
+	<input type="file" name="worldImg" placeholder="World image" class="inpt" required>
+	<br>
+	<button type="submit" name="submit" class="btn">Create world</button>
 </form>

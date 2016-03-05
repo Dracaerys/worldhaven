@@ -3,7 +3,7 @@
 	<head>
 	</head>
 	<body>
-		<div id="loginBox" class="box">
+		<div id="loginBox" class="box formBox">
 			<?php include_once("../inc/login.php"); ?>
 		</div>
 	</body>
