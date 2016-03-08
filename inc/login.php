@@ -55,4 +55,4 @@
 	<br>
 	<button type="submit" name="submit" class="btn">Log in</button>
 </form>
-<p>Don't have an account? <a href="/worldhaven/register">Register here.</a></p>
+<p id="registerLink">Don't have an account? <a href="/worldhaven/register">Register here.</a></p>

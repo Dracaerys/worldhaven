@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #252525;
+	color: #ddd;
 }
 
 .noselect {
@@ -39,7 +40,6 @@ p {
 	width: 100%;
 	height: 75px;
 	background-color: #212121;
-	//box-shadow: 0px 2px 5px grey;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	position: fixed;
 	top: 0px;
@@ -135,7 +135,6 @@ p {
 }
 
 #accountBox div {
-	color: #ddd;
 	font-size: 24px;
 	position: absolute;
 	left: 110px;
@@ -163,14 +162,12 @@ p {
 }
 
 #toast {
-	//height: 50px;
 	background-color: #3d80ee;
 	position: fixed;
 	bottom: 20px;
 	left: calc(50% - 70px);
 	line-height: 1.5;
 	padding: 10px 25px;
-	color: #ddd;
 	border-radius: 2px;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 	opacity: 0;
@@ -224,7 +221,6 @@ p {
 #mainContainer {
 	width: 1200px;
 	height: 1000px;
-	//background-color: #212121;
 	margin: 100px auto 25px;
 	overflow: hidden;
 	padding: 10px;
@@ -232,40 +228,29 @@ p {
 }
 
 #welcomeImg {
-	position: relative;
-	display: block;
 	max-width: 100%;
 	max-height: 300px;
 	font-weight: 700;
 	background-color: #212121;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	border-radius: 5px 5px 0px 0px;
-	color: #ddd;
-	text-align: center;
 	font-size: 80px;
 	line-height: 1.8em;
 	text-shadow: 1px 1px grey;
-	margin-bottom: 0px;
-	z-index: 0;
 	cursor: default;
 }
 
 #welcomeText {
-	position: relative;
 	width: 660px;
-	height: 84px;
 	background-color: #252525;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	padding: 10px;
 	border-radius: 0px 0px 5px 5px;
-	color: #ddd;
 	font-size: 18px;
-	z-index: 0;
 }
 
 #centerCol {
 	width: 680px;
-	//height: 500px;
 	overflow: hidden;
 	padding: 10px;
 	position: relative;
@@ -300,7 +285,6 @@ p {
 	line-height: 3em;
 	box-shadow: 0 1px 0px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	margin-bottom: 3px;
-	color: #ddd;
 }
 
 .worldInfo {
@@ -309,7 +293,6 @@ p {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	line-height: 1.5em;
 	overflow: hidden;
-	color: #ddd;
 }
 
 .worldInfo p {
@@ -374,10 +357,11 @@ li {
 	line-height: 1.8em;
 	vertical-align: text-top;
 	font-size: 20px;
-	background-size: 30px 24px;
+	background-size: 35px 35px;
 	background-repeat: no-repeat;	
 	transition: background-color 0.2s;
 	cursor: pointer;
+	background-position: 7px 0px;
 }
 
 li:hover {
@@ -385,19 +369,15 @@ li:hover {
 }
 
 #redditLi {
-	background-image: url(../img/redditIcon.png);
-	background-position: 5px 3px;
+	background-image: url(../img/redditIcon2.png);
 }
 
 #forumsLi {
 	background-image: url(../img/forums.png);
-	background-position: 5px 7px;
 }
 
 #twitterLi {
 	background-image: url(../img/twitterIcon.png);
-	background-size: 30px 30px;
-	background-position: 5px 5px;
 }
 /*===========
 ====LOGIN====
@@ -413,6 +393,16 @@ li:hover {
 	border-radius: 3px;
 }
 
+.formBox p {
+	margin: 0;
+	width: calc(100% - 20px);
+	position: absolute;
+	left: 0;
+	top: 10px;
+	padding: 10px;
+	color: inherit;
+}
+
 #loginBox {
 	width: 380px;
 	height: 285px;
@@ -422,12 +412,9 @@ li:hover {
 	background-position: 50% 50px;
 }
 
-#loginBox p {
-	margin: 0;
-	position: absolute;
-	left: 35px;
-	padding-top: 10px;
-	color: #ddd;
+#registerLink {
+	top: auto;
+	bottom: 10px;
 }
 
 #registerBox {
@@ -463,7 +450,7 @@ input, textarea {
 	width: 80%;
 	font-size: 20px;
 	background-color: #212121;
-	color: #ddd;
+	color: inherit;
 	border: none;
 	border-bottom: 2px solid grey;
 	transition: border 0.2s;
@@ -509,10 +496,12 @@ textarea {
 input[type="file"] {
 	width: 255px !important;
 	border: none;
+	transition: color 0.2s;
 }
 
 input[type="file"]:hover {
 	border: none !important;
+	color: #4d90fe;
 }
 
 input[type="file"]:focus {
